@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1> About Learn Code </h1>
+	<h1> I'm Learning Spring Boot </h1>
+	<h1 th:text="${name}"></h1>
+	<h2 th:text="${currentDate}"></h2>
+	<h2>Name of the owner is <span th:text="${#strings.toUpperCase(name)}"></span></h2>
+	<p>Length of the name is <span th:text="${#strings.length(name)}"></span></p>
+	
+	<div th:with="a = 5, b = 13">
+	
+	<h1 th:text="'Sum of '+${a}+' and '+${b}+' = '+${a+b}"></h1>
+	
+	</div>
+</body>
+</html>

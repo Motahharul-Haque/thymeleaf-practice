@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Example of loop</title>
+</head>
+<body>
+	<h1>Going to traverse elements in collection</h1>
+	<h1 th:text=${list}></h1>
+	
+	<ul>
+	
+		<li th:each="n, status : ${list}">
+		<span th:style="${status.odd} ? 'font-weight:bold;color:Red' : ' font-weight:bold;color:Green'"th:text="${status.index}+' '+${n}"></span>
+		
+		</li>
+	
+	</ul>
+</body>
+
+</html>
